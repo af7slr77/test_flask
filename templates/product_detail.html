@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {%block title -%}
+    {% if title %}
+        <title>{{title}}</title>
+    {% endif %}
+    {%endblock%}
+    <link rel="stylesheet" type="text/css" href="static/css/style.css">
+
+</head>
+<body>
+<div id="content_div">
+    {% block content %}
+    <h1>{{product.title}}</h1>
+    {{product_title}}
+    {%endblock%}
+</div>
+</body>
+</html>
