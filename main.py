@@ -1,5 +1,4 @@
 from flask import Flask, jsonify, render_template
-from flask_sqlalchemy import SQLAlchemy
 from models import Products, db
 from parser import all_ads, product_page
 
