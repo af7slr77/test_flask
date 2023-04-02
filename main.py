@@ -10,30 +10,6 @@ app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///test.db"
 db.init_app(app)
 
 
-# class Products(db.Model):
-#     id = db.Column(db.Integer, primary_key=True)
-#     title = db.Column(db.String, unique=True, nullable=False)
-#     price = db.Column(db.Integer(), nullable=False)
-#     description = db.Column(db.Text(), nullable=False)
-#     city = db.Column(db.String(), nullable=False)
-
-#     def __init__(self, title, price, description, city):
-#         self.title = title
-#         self.price = price
-#         self.description = description
-#         self.city = city
-
-#     def to_dict(self):
-#         return {
-#             "id":self.id,
-#             "url":self.id,
-#             "title":self.title,
-#             "price":self.price,
-#             "description":self.description,
-#             "city":self.city
-#         }
-
-
 @app.route("/product/<int:id>")
 def product_detail(id):
     product = db.get_or_404(Products, id)
